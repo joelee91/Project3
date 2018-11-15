@@ -9,7 +9,12 @@ const User = new Schema({
     lastName: String,
     age: Number,
     location: String,
-    posts: Array,
+    posts: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Post'
+        }
+    ],
     friends: Array,
     photos: Array,
     events: Array,
