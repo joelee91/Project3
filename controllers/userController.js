@@ -12,8 +12,14 @@ const userController = {
             .then((user) => {
                 res.send(user)
             })
+    },
+    update: (req, res) => {
+        User.findByIdAndUpdate(req.params.userId, req.body)
+            .then((updatedUser) => {
+                updatedUser.save()
+                res.send(updatedUser)
+            })
     }
-
 }
 
 module.exports = userController
