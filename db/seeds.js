@@ -2,6 +2,10 @@ const User = require('../models/User')
 const Post = require('../models/Post')
 const mongoose = require('./connections')
 
+const joePost1 = new Post({
+    text: "my first post"
+})
+
 const joe = new User({
     email: 'joesampras@gmail.com',
     username: 'joelee',
@@ -9,11 +13,8 @@ const joe = new User({
     firstName: 'joe',
     lastName: 'lee',
     age: 26,
-    location: 'joelee'
-})
-
-const joePost1 = new Post({
-    text: "my first post"
+    location: 'joelee',
+    posts: joePost1
 })
 
 User.remove({})

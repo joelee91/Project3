@@ -8,6 +8,13 @@ const postController = {
             .then((user) => {
                 res.send(user.posts)
             })
+    },
+    show: (req, res) => {
+        let postId = req.params.postId
+        Post.findById(postId)
+            .then((post) => {
+                res.send(post)
+            })
     }
 
 }

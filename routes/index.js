@@ -10,6 +10,6 @@ router.patch('/api/users/:userId', userController.update)
 router.delete('/api/users/:userId', userController.delete)
 
 router.get('/api/users/:userId/posts', postController.index)
-
+router.get('/api/users/:userId/posts/:postId', postController.show)
 
 module.exports = router
