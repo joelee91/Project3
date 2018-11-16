@@ -30,6 +30,18 @@ const postController = {
             .then(() => {
                 res.send(200)
             })
+    },
+    create: (req, res) => {
+        let userId = req.params.userId
+        User.findById(userId)
+            .then((user) => {
+                Post.create(req.body)
+                    .then((newPost) => {
+                        user.posts.push(newPost)
+                        user.save()
+                        res.send(newPost)
+                    })
+            })
     }
 
 }
