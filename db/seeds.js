@@ -1,4 +1,5 @@
 const User = require('../models/User')
+const Post = require('../models/Post')
 const mongoose = require('./connections')
 
 const joe = new User({
@@ -11,7 +12,13 @@ const joe = new User({
     location: 'joelee'
 })
 
+const joePost1 = new Post({
+    text: "my first post"
+})
+
 User.remove({})
+    .then(() => Post.remove({}))
+    .then(() => Post.insertMany(joePost1))
     .then(() => joe.save())
     .then(() => console.log('saved'))
     .then(() => mongoose.connection.close())

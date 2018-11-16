@@ -9,6 +9,7 @@ const postController = {
                 res.send(user.posts)
             })
     }
+
 }
 
 module.exports = postController

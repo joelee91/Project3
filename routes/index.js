@@ -11,4 +11,5 @@ router.delete('/api/users/:userId', userController.delete)
 
 router.get('/api/users/:userId/posts', postController.index)
 
+
 module.exports = router
