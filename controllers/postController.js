@@ -23,6 +23,13 @@ const postController = {
                 updatedPost.save()
                 res.send(updatedPost)
             })
+    },
+    delete: (req, res) => {
+        let postId = req.params.postId
+        Post.findByIdAndDelete(postId)
+            .then(() => {
+                res.send(200)
+            })
     }
 
 }
