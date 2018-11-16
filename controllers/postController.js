@@ -15,6 +15,14 @@ const postController = {
             .then((post) => {
                 res.send(post)
             })
+    },
+    update: (req, res) => {
+        let postId = req.params.postId
+        Post.findByIdAndUpdate(postId, req.body, { new: true })
+            .then((updatedPost) => {
+                updatedPost.save()
+                res.send(updatedPost)
+            })
     }
 
 }

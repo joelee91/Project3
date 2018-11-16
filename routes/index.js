@@ -11,5 +11,6 @@ router.delete('/api/users/:userId', userController.delete)
 
 router.get('/api/users/:userId/posts', postController.index)
 router.get('/api/users/:userId/posts/:postId', postController.show)
+router.patch('/api/users/:userId/posts/:postId', postController.update)
 
 module.exports = router
