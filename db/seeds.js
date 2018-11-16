@@ -23,7 +23,7 @@ const joe = new User({
 
 User.remove({})
     .then(() => Post.remove({}))
-    .then(() => Post.insertMany(joePost1, joePost2))
+    .then(() => Post.insertMany([joePost1, joePost2]))
     .then(() => joe.save())
     .then(() => console.log('saved'))
     .then(() => mongoose.connection.close())
