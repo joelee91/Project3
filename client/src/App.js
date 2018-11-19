@@ -19,7 +19,7 @@ class App extends Component {
           <NavBar />
           <Switch>
             <Route exact path="/login" component={LogInPage} />
-            <Route exact path="/users/:userId" component={UserProfile} />
+            <Route exact path="/users/:userId" component={HomePage} />
             <Route path="/" component={HomePage} />
           </Switch>
         </div>

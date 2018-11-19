@@ -1,32 +1,34 @@
 import React, { Component } from 'react';
-import axios from 'axios'
-import styled from 'styled-components'
-import Post from './Post'
 
 class Posts extends Component {
     state = {
-        user: {},
-        posts: []
+        input: '',
+        submit: ''
     }
 
-    componentWillMount() {
-        const 
+    handleChange = (event) => {
+        const value = event.target.value
+        const name = event.target.name
+        this.setState({[name]: value})
     }
 
-    getAllPosts = () => {
-        const userId = this.props.match.params.userId
-        axios.get(`/api/users/${userId}`).then(res => {
-            this.setState({
-                user: res.data,
-                posts: res.data.posts
-            })
+    handleSubmit = (event) => {
+        event.preventDefault()
+        this.setState({
+            input: '',
+            submit: this.state.input
         })
     }
 
     render() {
         return (
             <div>
-                
+                <form onSubmit={this.handleSubmit}>
+                    <input value={this.state.input} onChange={this.handleChange}
+                        name="input"/>
+                    <button type='submit'>Post!</button>
+                </form>
+                <h1>{this.state.submit}</h1>
             </div>
         );
     }

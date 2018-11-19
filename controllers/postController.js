@@ -6,7 +6,7 @@ const postController = {
         let userId = req.params.userId
         User.findById(userId).populate('posts')
             .then((user) => {
-                user.posts = user.posts.reverse
+                user.posts = user.posts.reverse 
                 res.send(user.posts)
             })
     },
