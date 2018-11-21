@@ -18,8 +18,8 @@ class App extends Component {
           <Global />
           <NavBar />
           <Switch>
-            <Route exact path="/login" component={LogInPage} />
-            <Route exact path="/users/:userId" component={HomePage} />
+            <Route path="/login" component={LogInPage} />
+            <Route path="/users/:userId" component={UserProfile} />
             <Route path="/" component={HomePage} />
           </Switch>
         </div>

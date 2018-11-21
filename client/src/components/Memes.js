@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import axios from 'axios'
-import styled from 'styled-components'
 
-class UserProfile extends Component {
+class Memes extends Component {
     render() {
         return (
             <div>
@@ -12,4 +10,4 @@ class UserProfile extends Component {
     }
 }
 
-export default UserProfile;
+export default Memes;

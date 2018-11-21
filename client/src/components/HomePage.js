@@ -1,36 +1,31 @@
 import React, { Component } from 'react';
-import styled from 'styled-components'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 class HomePage extends Component {
     state = {
-        input: '',
-        submit: ''
+        users: []
     }
 
-    handleChange = (event) => {
-        const value = event.target.value
-        const name = event.target.name
-        this.setState({[name]: value})
-    }
-
-    handleSubmit = (event) => {
-        event.preventDefault()
-        this.setState({
-            input: '',
-            submit: this.state.input
+    getAllUsers = () => {
+        axios.get('/api/users').then((res) => {
+          this.setState({users: res.data})
         })
-    }
+      }
+    
+      componentDidMount(){
+        this.getAllUsers()
+      }
 
     render() {
         return (
             <div>
-                <form onSubmit={this.handleSubmit}>
-                    <input value={this.state.input} onChange={this.handleChange}
-                        name="input"/>
-                    <button type='submit'>Post!</button>
-                </form>
-                <h1>{this.state.submit}</h1>
+                <h1>Roast Me!</h1>
+                {this.state.users.map((user) => (
+                    <div key={user._id}>
+                        <Link to={`/users/${user._id}`}>{user.username}</Link>
+                    </div>
+                ))}
             </div>
         );
     }
