@@ -16,14 +16,14 @@ https://trello.com/b/irYVjPCU/project-3
 
 #### MERN stack:
 
-React.js
-MongoDB
-Express.js
-Node.js
+1. React.js
+2. MongoDB
+3. Express.js
+4. Node.js
 
 #### Other:
 
-Mongoose.js
-CSS and HTML
-styled-components
-Heroku
+1. Mongoose.js
+2. CSS and HTML
+3. styled-components
+4. Heroku
