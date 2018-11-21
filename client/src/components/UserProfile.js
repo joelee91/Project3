@@ -6,7 +6,6 @@ import Results from './Results'
 
 const ImgStyles = styled.div`  
 img{
-
     display: flex;
     flex-direction: row;
     width: 350px;

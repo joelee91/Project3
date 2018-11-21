@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
+
 const ImgStyles = styled.div`  
 img{
 
@@ -12,8 +13,15 @@ img{
     margin: 10px 0;
 }
     `
+    const NewMemeButton = styled.button`
+  background: #1d3557;
+  color: white;
+  font-size: 1.3rem;
+  padding: 7.5px 5px;
+`
 
 class Results extends Component {
+
     render() {
         let results = this.props.memes.map(meme => {
             return (
@@ -22,9 +30,13 @@ class Results extends Component {
                         <img src={meme.url}
                         alt={meme.name} />
                     </ImgStyles>
+                    <NewMemeButton onClick={this.handleCreateNewMeme}>
+                        Generate Meme
+                    </NewMemeButton>
                 </div>
             )
         })
+
         return (
             <div>
                 {results}
