@@ -1,16 +1,42 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import styled from 'styled-components'
-// import Image from 'react-image-resizer'
+import Search from './Search'
+import Results from './Results'
 
-const ImgStyles = styled.div`
-    
-`
+const ImgStyles = styled.div`  
+img{
+
+    display: flex;
+    flex-direction: row;
+    width: 350px;
+    height: 350px;
+    background: #f1faee;
+    margin: 10px 0;
+}
+    `
 
 class UserProfile extends Component {
     state = {
         users: [],
-        memes: []
+        memes: [],
+        query: '',
+        hasSearched: false
+    }
+
+    
+
+    onSubmitQuery = (e) => {
+        e.preventDefault()
+        this.setState({
+            hasSearched: true
+        })
+    }
+
+    onSearchInput = (e) => {
+        this.setState({
+            query: e.target.value
+        })
     }
 
     getAllMemes = () => {
@@ -25,38 +51,22 @@ class UserProfile extends Component {
         })
     }
 
-
-    // getAllMemes = () => {
-    //     axios.get('https://api.imgflip.com/get_memes')
-    //     .then(res => res.data.data.memes.map(meme => (
-    //         {
-    //             name: `${meme.name}`
-    //         }
-    //     )))
-    //     .then(newData => console.log(newData))
-    // }
-
     componentDidMount() {
         this.getAllMemes()
     }
+
+    
     render() {
         return (
             <div>
-                {this.state.memes.map(meme => (
-                    <div key={meme.id}>
-                        {console.log('meme')}
-                        {/* <Image>
-                            <img src={meme.url} 
-                            alt={meme.name}
-                            height={50}
-                            width={50} />
-                        </Image> */}
-                        <img src={meme.url}
-                        alt={meme.name}
+                {
+                    this.state.hasSearched ?
+                        <Results memes={this.state.memes} /> :
+                        <Search
+                            onSubmitQuery={this.onSubmitQuery}
+                            onSearchInput={this.onSearchInput}
                         />
-                        
-                    </div>
-                ))}
+                }
             </div>
         );
     }
