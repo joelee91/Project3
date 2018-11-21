@@ -7,3 +7,22 @@ My project 3 is an app that showcases users who are willing to be "roasted". Aft
 
 ## Link to Site
 https://project3-joelee.herokuapp.com/
+
+
+## Link to Trello
+https://trello.com/b/irYVjPCU/project-3
+
+## Technologies Used
+####MERN stack:
+
+React.js
+MongoDB
+Express.js
+Node.js
+
+####Other:
+
+Mongoose.js
+CSS and HTML
+styled-components
+Heroku
