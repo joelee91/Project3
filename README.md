@@ -13,14 +13,15 @@ https://project3-joelee.herokuapp.com/
 https://trello.com/b/irYVjPCU/project-3
 
 ## Technologies Used
-####MERN stack:
+
+#### MERN stack:
 
 React.js
 MongoDB
 Express.js
 Node.js
 
-####Other:
+#### Other:
 
 Mongoose.js
 CSS and HTML
