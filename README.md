@@ -12,6 +12,12 @@ https://project3-joelee.herokuapp.com/
 ## Link to Trello
 https://trello.com/b/irYVjPCU/project-3
 
+## Link to Figma(Wireframe)
+
+
+## ERD Picture
+https://files.slack.com/files-pri/T0351JZQ0-FEE6P1UNT/20181113_151021.jpg
+
 ## Technologies Used
 
 #### MERN stack:
