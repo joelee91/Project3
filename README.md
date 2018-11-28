@@ -17,6 +17,7 @@ https://www.figma.com/file/cZ2PL6CjPHIUYWotGLusDdz7/PROJECT-3?node-id=0%3A1
 
 ## ERD Picture
 (erd.jpg)
+
 ## Technologies Used
 
 #### MERN stack:
