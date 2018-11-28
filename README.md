@@ -16,7 +16,7 @@ https://trello.com/b/irYVjPCU/project-3
 https://www.figma.com/file/cZ2PL6CjPHIUYWotGLusDdz7/PROJECT-3?node-id=0%3A1
 
 ## ERD Picture
-(https://github.com/joelee91/Project3/blob/master/erd.jpg)
+![](https://github.com/joelee91/Project3/blob/master/erd.jpg)
 
 ## Technologies Used
 
