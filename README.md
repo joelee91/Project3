@@ -13,10 +13,10 @@ https://project3-joelee.herokuapp.com/
 https://trello.com/b/irYVjPCU/project-3
 
 ## Link to Figma(Wireframe)
-
+https://www.figma.com/file/cZ2PL6CjPHIUYWotGLusDdz7/PROJECT-3?node-id=0%3A1
 
 ## ERD Picture
-https://files.slack.com/files-pri/T0351JZQ0-FEE6P1UNT/20181113_151021.jpg
+https://files.slack.com/files-pri/T0351JZQ0-FEE6P1UNT/20181113_151021.jpg?raw=true
 
 ## Technologies Used
 
